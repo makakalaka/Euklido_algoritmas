@@ -1,0 +1,17 @@
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.csprojAssemblyReference.cache
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\MainWindow.g.cs
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\UI\UC_Computer.g.cs
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\App.g.cs
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas_MarkupCompile.cache
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas_MarkupCompile.lref
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\Euklido_algoritmas.exe.config
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\Euklido_algoritmas.exe
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\Euklido_algoritmas.pdb
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\MainWindow.baml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\UI\UC_Computer.baml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.g.resources
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.Properties.Resources.resources
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.csproj.GenerateResource.cache
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.csproj.CoreCompileInputs.cache
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.exe
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.pdb

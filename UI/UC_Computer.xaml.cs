@@ -48,6 +48,7 @@ namespace Euklido_algoritmas.UI
             this.Diagonal = diagonal1;
             this.Weigh = weight1;
             this.BatteryCapacity = batteryCapacity1;
+        }
 
 
 

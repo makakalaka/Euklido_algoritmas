@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Euklido_algoritmas.Backend
 {
+    class test
+    { }
    public class Computer
     {
         private int ID;
