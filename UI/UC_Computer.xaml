@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Euklido_algoritmas.UI.UC_Computer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Euklido_algoritmas.UI"
+             mc:Ignorable="d" Height="30" Width="980">
+    <Grid Background="White" Margin="0,1">
+        <Label x:Name="lbl_ID" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_manufacturor" Content="Label" HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_CPU" Content="Label" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_cores" Content="Label" HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_ram" Content="Label" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_SSD" Content="Label" HorizontalAlignment="Left" Margin="375,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.789,-1.192" Width="75"/>
+        <Label x:Name="lbl_storageCapacity" Content="Label" HorizontalAlignment="Left" Margin="450,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_vRAM" Content="Label" HorizontalAlignment="Left" Margin="525,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_diagonal" Content="Label" HorizontalAlignment="Left" Margin="600,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.237,-1.192" Width="75"/>
+        <Label x:Name="lbl_weigh" Content="Label" HorizontalAlignment="Left" Margin="675,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_refreshRate" Content="Label" HorizontalAlignment="Left" Margin="825,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_batteryCapacity" Content="Label" HorizontalAlignment="Left" Margin="750,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lbl_resut" Content="Label" HorizontalAlignment="Left" Margin="900,0,0,0" VerticalAlignment="Top" Width="80"/>
+    </Grid>
+</UserControl>
