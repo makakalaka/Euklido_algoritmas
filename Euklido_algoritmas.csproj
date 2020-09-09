@@ -77,7 +77,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Backend\Euclidean.cs" />
-    <Compile Include="Backend\PreferedComputer.cs" />
     <Compile Include="Backend\PreferencesValues.cs" />
     <Compile Include="Backend\SQLite.cs" />
     <Compile Include="UI\UC_Computer.xaml.cs">

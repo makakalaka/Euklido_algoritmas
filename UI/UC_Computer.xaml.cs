@@ -40,7 +40,7 @@ namespace Euklido_algoritmas.UI
             InitializeComponent();
         }
         public UC_Computer(int ID1, string manufacturor1,double price1, double CPU1, int cores1, int RAM1, bool SSD1, int storageCapacity1,
-            int vRAM1, double diagonal1, double weight1, int batteryCapacity1, int refreshRate1)
+            int vRAM1, double diagonal1, double weight1, int batteryCapacity1, int refreshRate1,double distance1)
         {
             InitializeComponent();
             ID = ID1;
@@ -69,6 +69,7 @@ namespace Euklido_algoritmas.UI
             this.lbl_batteryCapacity.Content = batteryCapacity;
             refreshRate = refreshRate1;
             this.lbl_refreshRate.Content = refreshRate;
+            this.lbl_resut.Content = distance1;
         }
 
         public void setID(int id)

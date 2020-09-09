@@ -45,3 +45,16 @@ C:\Users\Ailandas\Desktop\Euklido_algoritmas\Euklido_algoritmas\obj\Debug\Euklid
 C:\Users\Ailandas\Desktop\Euklido_algoritmas\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.csproj.CopyComplete
 C:\Users\Ailandas\Desktop\Euklido_algoritmas\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.exe
 C:\Users\Ailandas\Desktop\Euklido_algoritmas\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.pdb
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Buffers.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Data.SQLite.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Memory.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Buffers.xml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Data.SQLite.xml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Memory.xml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Ernestas\Desktop\Euklido_algoritmas\obj\Debug\Euklido_algoritmas.csproj.CopyComplete

@@ -48,7 +48,7 @@
         <Label Content="Svarba" HorizontalAlignment="Left" Margin="1305,44,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="23" Margin="1160,516,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
         <Label Content="Price:" HorizontalAlignment="Left" Margin="1018,513,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="102"/>
-        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="1290,516,0,0" VerticalAlignment="Top" Width="80" Height="28" Click="btnSearch_Click"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="1290,557,0,0" VerticalAlignment="Top" Width="80" Height="28" Click="btnSearch_Click"/>
         <Label Content="ID" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
         <Label Content="Manufacturor" HorizontalAlignment="Left" Margin="58,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
         <Label Content="Price (€)" HorizontalAlignment="Left" Margin="185,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
@@ -63,5 +63,6 @@
         <Label Content="Battery (h)" HorizontalAlignment="Left" Margin="770,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
         <Label Content="RefreshRate(Hz)" HorizontalAlignment="Left" Margin="835,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654" FontSize="10"/>
         <Label Content="Distance" HorizontalAlignment="Left" Margin="918,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <ComboBox x:Name="cb_refresh_rate_Copy" HorizontalAlignment="Left" Height="26" Margin="1290,516,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
     </Grid>
 </Window>
