@@ -5,46 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Euklido_algoritmas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="587" Width="1400">
+        Title="MainWindow" Height="737" Width="1400">
     <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,40,0,0" VerticalAlignment="Top" Width="1000">
-            <StackPanel Background="#FF979797" >
+        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,44,0,0" VerticalAlignment="Top" Width="1000">
+            <StackPanel x:Name="stackPanelComputers" Background="#FF979797" >
 
             </StackPanel>
         </ScrollViewer>
-        <Label Content="CPU (GHz)" HorizontalAlignment="Left" Margin="1016,71,0,0" VerticalAlignment="Top"/>
-        <Label Content="Cores" HorizontalAlignment="Left" Margin="1016,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.577" Width="45"/>
-        <Label Content="RAM (GB)" HorizontalAlignment="Left" Margin="1016,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2,3.269"/>
-        <Label Content="SSD or HDD" HorizontalAlignment="Left" Margin="1016,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.385"/>
-        <Label Content="Storage (GB)" HorizontalAlignment="Left" Margin="1016,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="78"/>
-        <Label Content="VRam (GB)" HorizontalAlignment="Left" Margin="1016,295,0,0" VerticalAlignment="Top"/>
-        <Label Content="Diagonal (in)" HorizontalAlignment="Left" Margin="1016,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.577" Width="78"/>
-        <Label Content="Weight (Kg)" HorizontalAlignment="Left" Margin="1016,384,0,0" VerticalAlignment="Top"/>
-        <Label Content="Battery capacity (Wh)" HorizontalAlignment="Left" Margin="1018,429,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.385" Width="127"/>
-        <Label Content="Refresh rate (Hz)" HorizontalAlignment="Left" Margin="1018,476,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="102"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,70,0,0"   Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,110,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,155,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,204,0,0" Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.625,1.731"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,245,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.562,5.962"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,294,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,339,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,383,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,429,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="1160,475,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <Label Content="CPU (GHz)" HorizontalAlignment="Left" Margin="1016,75,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cores" HorizontalAlignment="Left" Margin="1016,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.577" Width="45"/>
+        <Label Content="RAM (GB)" HorizontalAlignment="Left" Margin="1016,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2,3.269"/>
+        <Label Content="SSD or HDD" HorizontalAlignment="Left" Margin="1016,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.385"/>
+        <Label Content="Storage (GB)" HorizontalAlignment="Left" Margin="1016,250,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="78"/>
+        <Label Content="VRam (GB)" HorizontalAlignment="Left" Margin="1016,299,0,0" VerticalAlignment="Top"/>
+        <Label Content="Diagonal (in)" HorizontalAlignment="Left" Margin="1016,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.577" Width="78"/>
+        <Label Content="Weight (Kg)" HorizontalAlignment="Left" Margin="1016,388,0,0" VerticalAlignment="Top"/>
+        <Label Content="Battery capacity (Wh)" HorizontalAlignment="Left" Margin="1018,433,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.385" Width="127"/>
+        <Label Content="Refresh rate (Hz)" HorizontalAlignment="Left" Margin="1018,480,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="102"/>
+        <ComboBox x:Name="par_CPU" HorizontalAlignment="Left" Height="26" Margin="1160,74,0,0"   Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_Cores" HorizontalAlignment="Left" Height="26" Margin="1160,114,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_RAM" HorizontalAlignment="Left" Height="26" Margin="1160,159,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_SDDHDD" HorizontalAlignment="Left" Height="26" Margin="1160,208,0,0" Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.625,1.731"/>
+        <ComboBox x:Name="par_Sorage" HorizontalAlignment="Left" Height="26" Margin="1160,249,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.562,5.962"/>
+        <ComboBox x:Name="par_VRAM" HorizontalAlignment="Left" Height="26" Margin="1160,298,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_DIAG" HorizontalAlignment="Left" Height="26" Margin="1160,343,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_Weigh" HorizontalAlignment="Left" Height="26" Margin="1160,387,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_BATTERY" HorizontalAlignment="Left" Height="26" Margin="1160,433,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="par_REFRESH" HorizontalAlignment="Left" Height="26" Margin="1160,479,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
         <ComboBox HorizontalAlignment="Left" Margin="1450,380,-178,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cb_CPU" HorizontalAlignment="Left" Height="26" Margin="1290,70,0,0"   Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_cores" HorizontalAlignment="Left" Height="26" Margin="1290,110,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_RAM" HorizontalAlignment="Left" Height="26" Margin="1290,155,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_SSDorHDD" HorizontalAlignment="Left" Height="26" Margin="1290,204,0,0" Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.625,1.731"/>
-        <ComboBox x:Name="cb_Storage" HorizontalAlignment="Left" Height="26" Margin="1290,245,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.562,5.962"/>
-        <ComboBox x:Name="cb_vRam" HorizontalAlignment="Left" Height="26" Margin="1290,294,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_diagonal" HorizontalAlignment="Left" Height="26" Margin="1290,339,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_weight" HorizontalAlignment="Left" Height="26" Margin="1290,383,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_battery_capacity" HorizontalAlignment="Left" Height="26" Margin="1290,429,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_refresh_rate" HorizontalAlignment="Left" Height="26" Margin="1290,475,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
-        <Label Content="Pavadinimas" HorizontalAlignment="Left" Margin="1015,40,0,0" VerticalAlignment="Top"/>
-        <Label Content="Parametras" HorizontalAlignment="Left" Margin="1160,40,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label Content="Svarba" HorizontalAlignment="Left" Margin="1305,40,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cb_CPU" HorizontalAlignment="Left" Height="26" Margin="1290,74,0,0"   Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_cores" HorizontalAlignment="Left" Height="26" Margin="1290,114,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_RAM" HorizontalAlignment="Left" Height="26" Margin="1290,159,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_SSDorHDD" HorizontalAlignment="Left" Height="26" Margin="1290,208,0,0" Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.625,1.731"/>
+        <ComboBox x:Name="cb_Storage" HorizontalAlignment="Left" Height="26" Margin="1290,249,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.562,5.962"/>
+        <ComboBox x:Name="cb_vRam" HorizontalAlignment="Left" Height="26" Margin="1290,298,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_diagonal" HorizontalAlignment="Left" Height="26" Margin="1290,343,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_weight" HorizontalAlignment="Left" Height="26" Margin="1290,387,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_battery_capacity" HorizontalAlignment="Left" Height="26" Margin="1290,433,0,0" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cb_refresh_rate" HorizontalAlignment="Left" Height="26" Margin="1290,479,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Pavadinimas" HorizontalAlignment="Left" Margin="1015,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Parametras" HorizontalAlignment="Left" Margin="1160,44,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Svarba" HorizontalAlignment="Left" Margin="1305,44,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="23" Margin="1160,516,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="1018,513,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.105,0.577" Width="102"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="1290,516,0,0" VerticalAlignment="Top" Width="80" Height="28" Click="btnSearch_Click"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Manufacturor" HorizontalAlignment="Left" Margin="58,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Price (€)" HorizontalAlignment="Left" Margin="185,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="CPU (Hz)" HorizontalAlignment="Left" Margin="276,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Cores" HorizontalAlignment="Left" Margin="338,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="RAM (GB)" HorizontalAlignment="Left" Margin="378,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="SSD" HorizontalAlignment="Left" Margin="455,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Storage (GB)" HorizontalAlignment="Left" Margin="491,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="vRAM (GB)" HorizontalAlignment="Left" Margin="573,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Diagonal (in)" HorizontalAlignment="Left" Margin="645,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Weight" HorizontalAlignment="Left" Margin="722,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="Battery (h)" HorizontalAlignment="Left" Margin="770,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
+        <Label Content="RefreshRate(Hz)" HorizontalAlignment="Left" Margin="835,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654" FontSize="10"/>
+        <Label Content="Distance" HorizontalAlignment="Left" Margin="918,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
     </Grid>
 </Window>
