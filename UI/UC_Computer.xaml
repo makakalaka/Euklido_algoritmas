@@ -6,18 +6,19 @@
              xmlns:local="clr-namespace:Euklido_algoritmas.UI"
              mc:Ignorable="d" Height="30" Width="980">
     <Grid Background="White" Margin="0,1">
-        <Label x:Name="lbl_ID" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_manufacturor" Content="Label" HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_CPU" Content="Label" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_cores" Content="Label" HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_ram" Content="Label" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_SSD" Content="Label" HorizontalAlignment="Left" Margin="375,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.789,-1.192" Width="75"/>
-        <Label x:Name="lbl_storageCapacity" Content="Label" HorizontalAlignment="Left" Margin="450,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_vRAM" Content="Label" HorizontalAlignment="Left" Margin="525,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_diagonal" Content="Label" HorizontalAlignment="Left" Margin="600,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.237,-1.192" Width="75"/>
-        <Label x:Name="lbl_weigh" Content="Label" HorizontalAlignment="Left" Margin="675,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_refreshRate" Content="Label" HorizontalAlignment="Left" Margin="825,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_batteryCapacity" Content="Label" HorizontalAlignment="Left" Margin="750,0,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="lbl_resut" Content="Label" HorizontalAlignment="Left" Margin="900,0,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="lbl_ID" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55"/>
+        <Label x:Name="lbl_manufacturor" Content="Label" HorizontalAlignment="Left" Margin="60,2,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_CPU" Content="Label" HorizontalAlignment="Left" Margin="275,2,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.583,0.577"/>
+        <Label x:Name="lbl_cores" Content="Label" HorizontalAlignment="Left" Margin="335,2,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="1.75,0.577"/>
+        <Label x:Name="lbl_ram" Content="Label" HorizontalAlignment="Left" Margin="380,2,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_SSD" Content="Label" HorizontalAlignment="Left" Margin="445,2,0,0" VerticalAlignment="Top"  Width="60"/>
+        <Label x:Name="lbl_storageCapacity" Content="Label" HorizontalAlignment="Left" Margin="510,0,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_vRAM" Content="Label" HorizontalAlignment="Left" Margin="575,2,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_diagonal" Content="Label" HorizontalAlignment="Left" Margin="650,0,0,0" VerticalAlignment="Top"  Width="60"/>
+        <Label x:Name="lbl_weigh" Content="Label" HorizontalAlignment="Left" Margin="715,0,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_refreshRate" Content="Label" HorizontalAlignment="Left" Margin="845,0,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_batteryCapacity" Content="Label" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="lbl_resut" Content="Label" HorizontalAlignment="Left" Margin="910,0,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.75,0.577"/>
+        <Label x:Name="lbl_price" Content="Label" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center"/>
     </Grid>
 </UserControl>

@@ -12,14 +12,12 @@ namespace Euklido_algoritmas.Backend
         public static Computer selectedData = new Computer();
 
 
-        public static void Calculate()
+        public static List<Computer> Calculate(double prefPrice, int prefCPU, int prefCores, int prefRAM, int prefSSDorHDD,
+            int prefStorage, int prefVRAM, int prefDiagonal, int prefWeight, int prefBatteryCapacity, int prefRefreshRate, 
+            List<Computer> listOfComputers, Computer desiredSpecs)
         {
-            for(int i=0;i<data.Count();i++)
-            {
-                //double result;
-                //do euclidean
-                //data[i].result=result;
-            }
+            List<Computer> computers = new List<Computer>();
+            return computers;
         }
     }
 }
