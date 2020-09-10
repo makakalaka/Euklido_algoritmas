@@ -26,12 +26,20 @@ namespace Euklido_algoritmas
         List<ComboBox> comboBoxesSpecs = new List<ComboBox>();
         List<Computer> listOfComputers;
         List<UI.UC_Computer> computer_user_controls = new List<UI.UC_Computer>();
+
         public MainWindow()
         {
             InitializeComponent();
             FillStartup();
         }
 
+        public void FillPreset(List<ComboBox> cboxes)
+        { 
+            foreach(var box in cboxes)
+            {
+                box.SelectedIndex = 2;
+            }
+        }
         public void FillStartup()
         {
             comboBoxes.Add(cb_CPU);
@@ -45,7 +53,6 @@ namespace Euklido_algoritmas
             comboBoxes.Add(cb_vRam);
             comboBoxes.Add(cb_weight);
             comboBoxes.Add(cb_refresh_rate_Copy);
-
             PreferencesValues values = new PreferencesValues();
             for (int i = 0; i < values.GetPreferences.Length; i++)
             {
@@ -54,24 +61,9 @@ namespace Euklido_algoritmas
                     comboBoxes[j].Items.Add(values.GetPreferences[i]);
                 }
             }
-
+            FillPreset(comboBoxes);
             listOfComputers = SQLite.FetchComputers();
             FillUC(listOfComputers);
-            //for (int i = 0; i < listOfComputers.Count; i++)
-            //{
-            //    Console.WriteLine("ID " + listOfComputers[i].getID());
-            //    UI.UC_Computer singleUserControl = new UI.UC_Computer(listOfComputers[i].getID(), listOfComputers[i].getManufacturor(),
-            //        listOfComputers[i].getPrice(), listOfComputers[i].getCPU(), listOfComputers[i].getCores(), listOfComputers[i].getRAM(),
-            //        listOfComputers[i].getSSD(), listOfComputers[i].getStorageCapacity(), listOfComputers[i].getVRAM(), listOfComputers[i].getDiagonal(),
-            //        listOfComputers[i].getWeight(), listOfComputers[i].getBatteryCapacity(), listOfComputers[i].getRefreshRate());
-
-            //    computer_user_controls.Add(singleUserControl);
-            //}
-            //for (int i = 0; i < computer_user_controls.Count; i++)
-            //{
-            //    stackPanelComputers.Children.Add(computer_user_controls[i]);
-            //}
-
             comboBoxesSpecs.Add(par_BATTERY);
             comboBoxesSpecs.Add(par_Cores);
             comboBoxesSpecs.Add(par_CPU);
@@ -82,7 +74,6 @@ namespace Euklido_algoritmas
             comboBoxesSpecs.Add(par_Sorage);
             comboBoxesSpecs.Add(par_VRAM);
             comboBoxesSpecs.Add(par_Weigh);
-
             List<double> tempValues = new List<double>();
             string[] specValues = { "BatteryCapacity", "Cores", "CPU", "Diagonal", "RAM", "RefreshRate", "SSDorHDD", "StorageCapacity", "VRAM", "Weight"};
             for(int j=0;j<specValues.Length;j++)
@@ -93,8 +84,6 @@ namespace Euklido_algoritmas
                     comboBoxesSpecs[j].Items.Add(i);
                 tempValues.Clear();
             }
-
-
         }
 
         public void FillUC(List<Computer> listOfComputers)
@@ -135,7 +124,6 @@ namespace Euklido_algoritmas
                 int prefWeight = cb_weight.SelectedIndex + 1;
                 int prefBatteryCapacity = cb_battery_capacity.SelectedIndex + 1;
                 int prefRefreshRate = cb_refresh_rate.SelectedIndex + 1;
-
                 Computer desiredSpecs = new Computer();
                 desiredSpecs.setBatteryCapacity(Convert.ToInt32(par_BATTERY.SelectedItem));
                 desiredSpecs.setCores(Convert.ToInt32(par_Cores.SelectedItem));
