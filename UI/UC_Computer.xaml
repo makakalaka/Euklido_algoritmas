@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Euklido_algoritmas.UI"
-             mc:Ignorable="d" Height="30" Width="980">
-    <Grid Background="White" Margin="0,1">
+             mc:Ignorable="d" Height="35.867" Width="980">
+    <Grid Background="White" Margin="0,2,0,1">
         <Label x:Name="lbl_ID" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55"/>
         <Label x:Name="lbl_manufacturor" Content="Label" HorizontalAlignment="Left" Margin="60,2,0,0" VerticalAlignment="Top" Width="60"/>
         <Label x:Name="lbl_CPU" Content="Label" HorizontalAlignment="Left" Margin="275,2,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.583,0.577"/>

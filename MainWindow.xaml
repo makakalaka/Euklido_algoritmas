@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="737" Width="1400">
     <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,44,0,0" VerticalAlignment="Top" Width="1008">
-            <StackPanel x:Name="stackPanelComputers" Background="#FF979797" >
+        <Rectangle Fill="#FFBFBFFF" HorizontalAlignment="Left" Height="524" Margin="7,18,0,0" Stroke="Black" VerticalAlignment="Top" Width="1013"/>
 
-            </StackPanel>
+        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,44,0,0" VerticalAlignment="Top" Width="1008">
+            <StackPanel x:Name="stackPanelComputers" Background="#FF979797" />
         </ScrollViewer>
         <Label Content="CPU (GHz)" HorizontalAlignment="Left" Margin="1016,75,0,0" VerticalAlignment="Top"/>
         <Label Content="Cores" HorizontalAlignment="Left" Margin="1016,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.577" Width="45"/>
