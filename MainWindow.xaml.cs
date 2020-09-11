@@ -26,6 +26,7 @@ namespace Euklido_algoritmas
         List<ComboBox> comboBoxesSpecs = new List<ComboBox>();
         List<Computer> listOfComputers;
         List<UI.UC_Computer> computer_user_controls = new List<UI.UC_Computer>();
+        List<Computer> pcs;
 
         public MainWindow()
         {
@@ -42,6 +43,8 @@ namespace Euklido_algoritmas
         }
         public void FillStartup()
         {
+        
+
             comboBoxes.Add(cb_CPU);
             comboBoxes.Add(cb_battery_capacity);
             comboBoxes.Add(cb_cores);
@@ -84,6 +87,10 @@ namespace Euklido_algoritmas
                     comboBoxesSpecs[j].Items.Add(i);
                 tempValues.Clear();
             }
+            List<string> tempManufacturors = SQLite.DistinctManufacturors();
+            foreach (var i in tempManufacturors)
+                comboBoxFilterManufacturor.Items.Add(i);
+            tempManufacturors.Clear();
         }
 
         public void FillUC(List<Computer> listOfComputers)
@@ -108,39 +115,114 @@ namespace Euklido_algoritmas
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            if(txtPrice.Text!="" || cb_CPU.SelectedIndex!=-1|| cb_cores.SelectedIndex!=-1 || cb_RAM.SelectedIndex!=-1||
-                cb_SSDorHDD.SelectedIndex!=-1 || cb_Storage.SelectedIndex!=-1 || cb_vRam.SelectedIndex!=-1||
-                 cb_diagonal.SelectedIndex!=-1 || cb_weight.SelectedIndex!=-1 || cb_battery_capacity.SelectedIndex!=-1||
-                  cb_refresh_rate.SelectedIndex != -1)
+            if (txtPrice.Text.Length > 0)
             {
-                int prefPrice = cb_refresh_rate_Copy.SelectedIndex+1;
-                int prefCPU = cb_CPU.SelectedIndex + 1;
-                int prefCores = cb_cores.SelectedIndex + 1;
-                int prefRAM = cb_RAM.SelectedIndex + 1;
-                int prefSSDorHDD = cb_SSDorHDD.SelectedIndex + 1;
-                int prefStorage = cb_Storage.SelectedIndex + 1;
-                int prefVRAM = cb_vRam.SelectedIndex + 1;
-                int prefDiagonal = cb_diagonal.SelectedIndex + 1;
-                int prefWeight = cb_weight.SelectedIndex + 1;
-                int prefBatteryCapacity = cb_battery_capacity.SelectedIndex + 1;
-                int prefRefreshRate = cb_refresh_rate.SelectedIndex + 1;
-                Computer desiredSpecs = new Computer();
-                desiredSpecs.setBatteryCapacity(Convert.ToInt32(par_BATTERY.SelectedItem));
-                desiredSpecs.setCores(Convert.ToInt32(par_Cores.SelectedItem));
-                desiredSpecs.setCPU(Convert.ToDouble(par_CPU.SelectedItem));
-                desiredSpecs.setDiagonal(Convert.ToDouble(par_DIAG.SelectedItem));
-                desiredSpecs.setRAM(Convert.ToInt32(par_RAM.SelectedItem));
-                desiredSpecs.setRefreshRate(Convert.ToInt32(par_REFRESH.SelectedItem));
-                desiredSpecs.setVRAM(Convert.ToInt32(par_VRAM.SelectedItem));
-                desiredSpecs.setWeight(Convert.ToDouble(par_Weigh.SelectedItem));
-                desiredSpecs.setSSD(Convert.ToBoolean(par_SDDHDD.SelectedItem));
-                desiredSpecs.setStorageCapacity(Convert.ToInt32(par_Sorage.SelectedItem));
-                desiredSpecs.setPrice(Convert.ToDouble(txtPrice.Text));
-                List<Computer> pcs=Euclidean.Calculate(prefPrice, prefCPU, prefCores, prefRAM, prefSSDorHDD, prefStorage, prefVRAM, prefDiagonal,
-                    prefWeight, prefBatteryCapacity, prefRefreshRate, listOfComputers,desiredSpecs);
-                pcs.Sort((x, y) => x.getResult().CompareTo(y.getResult()));
+                if (cb_CPU.SelectedIndex != -1 || cb_cores.SelectedIndex != -1 || cb_RAM.SelectedIndex != -1 ||
+                    cb_SSDorHDD.SelectedIndex != -1 || cb_Storage.SelectedIndex != -1 || cb_vRam.SelectedIndex != -1 ||
+                     cb_diagonal.SelectedIndex != -1 || cb_weight.SelectedIndex != -1 || cb_battery_capacity.SelectedIndex != -1 ||
+                      cb_refresh_rate.SelectedIndex != -1 || par_CPU.SelectedIndex != -1 || par_Cores.SelectedIndex != -1 ||
+                      par_RAM.SelectedIndex != -1 || par_SDDHDD.SelectedIndex != -1 || par_Sorage.SelectedIndex != -1 ||
+                      par_VRAM.SelectedIndex != -1 || par_DIAG.SelectedIndex != -1 || par_Weigh.SelectedIndex != -1 ||
+                      !par_BATTERY.SelectedIndex.Equals(-1)  || !par_REFRESH.SelectedIndex.Equals(-1))
+                {
+                    int prefPrice = cb_refresh_rate_Copy.SelectedIndex + 1;
+                    int prefCPU = cb_CPU.SelectedIndex + 1;
+                    int prefCores = cb_cores.SelectedIndex + 1;
+                    int prefRAM = cb_RAM.SelectedIndex + 1;
+                    int prefSSDorHDD = cb_SSDorHDD.SelectedIndex + 1;
+                    int prefStorage = cb_Storage.SelectedIndex + 1;
+                    int prefVRAM = cb_vRam.SelectedIndex + 1;
+                    int prefDiagonal = cb_diagonal.SelectedIndex + 1;
+                    int prefWeight = cb_weight.SelectedIndex + 1;
+                    int prefBatteryCapacity = cb_battery_capacity.SelectedIndex + 1;
+                    int prefRefreshRate = cb_refresh_rate.SelectedIndex + 1;
+                    Computer desiredSpecs = new Computer();
+                    desiredSpecs.setBatteryCapacity(Convert.ToInt32(par_BATTERY.SelectedItem));
+                    desiredSpecs.setCores(Convert.ToInt32(par_Cores.SelectedItem));
+                    desiredSpecs.setCPU(Convert.ToDouble(par_CPU.SelectedItem));
+                    desiredSpecs.setDiagonal(Convert.ToDouble(par_DIAG.SelectedItem));
+                    desiredSpecs.setRAM(Convert.ToInt32(par_RAM.SelectedItem));
+                    desiredSpecs.setRefreshRate(Convert.ToInt32(par_REFRESH.SelectedItem));
+                    desiredSpecs.setVRAM(Convert.ToInt32(par_VRAM.SelectedItem));
+                    desiredSpecs.setWeight(Convert.ToDouble(par_Weigh.SelectedItem));
+                    desiredSpecs.setSSD(Convert.ToBoolean(par_SDDHDD.SelectedItem));
+                    desiredSpecs.setStorageCapacity(Convert.ToInt32(par_Sorage.SelectedItem));
+                    desiredSpecs.setPrice(Convert.ToDouble(txtPrice.Text));
+                    pcs = Euclidean.Calculate(prefPrice, prefCPU, prefCores, prefRAM, prefSSDorHDD, prefStorage, prefVRAM, prefDiagonal,
+                       prefWeight, prefBatteryCapacity, prefRefreshRate, listOfComputers, desiredSpecs);
+                    pcs.Sort((x, y) => x.getResult().CompareTo(y.getResult()));
+                    FillUC(pcs);
+                }
+                else
+                {
+                    MessageBox.Show("Neįrašėte pasirinkimų");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Neįrašėte kainos");
+            }
+        }
+
+        private void checkBox_filtras_Checked(object sender, RoutedEventArgs e)
+        {
+            comboBoxFilterManufacturor.IsEnabled = true;
+            lblFilerManufacturor.IsEnabled = true;
+        }
+
+        private void checkBox_filtras_Unchecked(object sender, RoutedEventArgs e)
+        {
+            comboBoxFilterManufacturor.SelectedIndex = -1;
+            comboBoxFilterManufacturor.IsEnabled = false;
+            lblFilerManufacturor.IsEnabled = false;
+            if (pcs != null)
+            {
+                stackPanelComputers.Children.Clear();
                 FillUC(pcs);
             }
+            else
+            {
+                stackPanelComputers.Children.Clear();
+                FillUC(listOfComputers);
+            }
+        }
+
+        private void comboBoxFilterManufacturor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (checkBox_filtras.IsChecked == true)
+            {
+
+                List<Computer> selectedManufactorComputers = new List<Computer>();
+                string selectedManufacturor = comboBoxFilterManufacturor.SelectedItem.ToString();
+                if (pcs != null)
+                {
+                     stackPanelComputers.Children.Clear();
+                    for (int i = 0; i < pcs.Count; i++)
+                    {
+                        if (pcs[i].getManufacturor() == selectedManufacturor)
+                        {
+                            selectedManufactorComputers.Add(pcs[i]);
+                            
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    stackPanelComputers.Children.Clear();
+                    for (int i = 0; i < listOfComputers.Count; i++)
+                    {
+                        if (listOfComputers[i].getManufacturor() == selectedManufacturor)
+                        {
+                            selectedManufactorComputers.Add(listOfComputers[i]);
+                            
+                        }
+                    }
+                    
+                }
+                FillUC(selectedManufactorComputers);
+            }
+            
         }
     }
 }

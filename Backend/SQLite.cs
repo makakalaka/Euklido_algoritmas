@@ -88,5 +88,23 @@ namespace Euklido_algoritmas.Backend
             m_dbConnection.Close();
             return listOfValues;
         }
+        public static List<string> DistinctManufacturors()
+        {
+            m_dbConnection.Open();
+
+            List<string> listOfValues = new List<string>();
+            string sql1 = $"SELECT DISTINCT Manufacturor FROM Computer";
+            SQLiteCommand command1 = new SQLiteCommand(sql1, m_dbConnection);
+
+            SQLiteDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
+            {
+
+                listOfValues.Add(reader1.GetString(0));
+            }
+
+            m_dbConnection.Close();
+            return listOfValues;
+        }
     }
 }

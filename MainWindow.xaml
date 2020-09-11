@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="737" Width="1400">
     <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,44,0,0" VerticalAlignment="Top" Width="1000">
+        <ScrollViewer HorizontalAlignment="Left" Height="495" Margin="10,44,0,0" VerticalAlignment="Top" Width="1008">
             <StackPanel x:Name="stackPanelComputers" Background="#FF979797" >
 
             </StackPanel>
@@ -64,5 +64,8 @@
         <Label Content="RefreshRate(Hz)" HorizontalAlignment="Left" Margin="835,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654" FontSize="10"/>
         <Label Content="Distance" HorizontalAlignment="Left" Margin="918,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654"/>
         <ComboBox x:Name="cb_refresh_rate_Copy" HorizontalAlignment="Left" Height="26" Margin="1290,516,0,0"  Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <CheckBox x:Name="checkBox_filtras" Content="Filtras" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top" Checked="checkBox_filtras_Checked" Unchecked="checkBox_filtras_Unchecked"/>
+        <ComboBox x:Name="comboBoxFilterManufacturor" HorizontalAlignment="Left" Margin="185,562,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" SelectionChanged="comboBoxFilterManufacturor_SelectionChanged"/>
+        <Label x:Name="lblFilerManufacturor" Content="Manufacturor" HorizontalAlignment="Left" Margin="98,559,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.136,0.654" IsEnabled="False"/>
     </Grid>
 </Window>
